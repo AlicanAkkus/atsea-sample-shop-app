@@ -28,6 +28,11 @@ services:
       placement:
         constraints:
           - 'node.role == worker'
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s    
 
   appserver:
     image: dockersamples/atsea_app
