@@ -68,7 +68,7 @@ services:
         limits:
           memory: 500M
         reservations:
-          cpus: '0.0001'
+          cpus: '1'
           memory: 20M
 
   payment_gateway:
