@@ -64,6 +64,12 @@ services:
       placement:
         constraints:
           - 'node.role == manager'
+      resources:
+        limits:
+          memory: 500M
+        reservations:
+          cpus: '0.0001'
+          memory: 20M
 
   payment_gateway:
     image: dockersamples/atseasampleshopapp_payment_gateway
